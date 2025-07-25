@@ -17,46 +17,8 @@
 <body class="font-sans antialiased bg-gray-50">
     <div class="min-h-screen">
         <!-- Navigation -->
-        <nav class="bg-white shadow-sm border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16">
-                    <div class="flex items-center">
-                        <img src="{{ asset('assets/logo.png') }}" alt="Bursa Talenta" class="w-8 h-8 mr-3">
-                        <span class="text-xl font-semibold text-gray-900">Bursa Talenta</span>
-                    </div>
-                    
-                    <div class="flex items-center space-x-4">
-                        <!-- Notifications -->
-                        <button class="p-2 text-gray-400 hover:text-gray-500">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM6 7c0-3.866 3.134-7 7-7s7 3.134 7 7c0 3.866-3.134 7-7 7s-7-3.134-7-7z" />
-                            </svg>
-                        </button>
-                        
-                        <!-- Profile dropdown -->
-                        <div class="relative">
-                            <div class="flex items-center space-x-3">
-                                <img class="h-8 w-8 rounded-full bg-indigo-100" 
-                                     src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&color=7C3AED&background=EDE9FE" 
-                                     alt="{{ auth()->user()->name }}">
-                                <div class="hidden md:block">
-                                    <div class="text-sm font-medium text-gray-900">{{ auth()->user()->name }}</div>
-                                    <div class="text-xs text-gray-500">Provider</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="text-gray-500 hover:text-gray-700 text-sm">
-                                Logout
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+        <x-provider-navbar />
+        
         <!-- Main Content -->
         <div class="flex">
             <!-- Sidebar -->
