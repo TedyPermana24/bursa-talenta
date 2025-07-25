@@ -1,11 +1,11 @@
 <x-auth-layout>
     <!-- Form Header -->
     <div class="mb-6">
-        <h2 class="text-2xl font-bold text-gray-900 mb-1">Daftar dulu yuk!</h2>
-        <p class="text-sm text-gray-500">Silahkan isi form berikut</p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-1">Daftar sebagai Penyedia Jasa</h2>
+        <p class="text-sm text-gray-500">Bergabunglah sebagai penyedia layanan profesional</p>
     </div>
 
-    <form method="POST" action="{{ route('register') }}" class="space-y-4">
+    <form method="POST" action="{{ route('provider.register') }}" class="space-y-4">
         @csrf
 
         <!-- Email Address -->
@@ -16,10 +16,10 @@
             <x-input-error :messages="$errors->get('email')" class="mt-1 text-xs" />
         </div>
 
-        <!-- Name / Role -->
+        <!-- Name -->
         <div>
             <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
-                autocomplete="name" placeholder="Nama"
+                autocomplete="name" placeholder="Nama Perusahaan/Institusi"
                 class="w-full px-3 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder-gray-400 text-gray-700 text-sm" />
             <x-input-error :messages="$errors->get('name')" class="mt-1 text-xs" />
         </div>
@@ -44,14 +44,14 @@
         <div class="pt-3">
             <button type="submit"
                 class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm">
-                Daftar
+                Daftar sebagai Penyedia
             </button>
         </div>
 
-        <!-- Terms and Login Link -->
+        <!-- Links -->
         <div class="text-center pt-3 space-y-2">
             <p class="text-sm text-gray-600">
-                Ingin daftar sebagai penyedia jasa? <a href="{{ route('provider.register') }}"
+                Ingin daftar sebagai pencari kerja? <a href="{{ route('register') }}"
                     class="text-indigo-600 hover:text-indigo-700 font-medium">Daftar di sini</a>
             </p>
             <p class="text-sm text-gray-600">

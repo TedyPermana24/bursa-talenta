@@ -12,18 +12,18 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
-class RegisteredUserController extends Controller
+class ProviderRegisterController extends Controller
 {
     /**
-     * Display the registration view.
+     * Display the provider registration view.
      */
     public function create(): View
     {
-        return view('auth.register');
+        return view('auth.provider-register');
     }
 
     /**
-     * Handle an incoming registration request.
+     * Handle an incoming provider registration request.
      *
      * @throws \Illuminate\Validation\ValidationException
      */
@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 'user',
+            'role' => 'provider',
         ]);
 
         event(new Registered($user));
