@@ -16,7 +16,7 @@
             <x-input-error :messages="$errors->get('email')" class="mt-1 text-xs" />
         </div>
 
-        <!-- Name / Role -->
+        <!-- Name -->
         <div>
             <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
                 autocomplete="name" placeholder="Nama"
@@ -51,7 +51,7 @@
         <!-- Terms and Login Link -->
         <div class="text-center pt-3 space-y-2">
             <p class="text-sm text-gray-600">
-                Ingin daftar sebagai penyedia jasa? <a href="{{ route('provider.register') }}"
+                Ingin daftar sebagai penyedia kerja? <a href="{{ route('provider.register') }}"
                     class="text-indigo-600 hover:text-indigo-700 font-medium">Daftar di sini</a>
             </p>
             <p class="text-sm text-gray-600">
