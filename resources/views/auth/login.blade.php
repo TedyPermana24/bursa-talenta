@@ -1,11 +1,4 @@
 <x-auth-layout>
-    <!-- Mobile Logo (visible on small screens) -->
-    <div class="lg:hidden mb-6 text-center">
-        <div class="flex items-center justify-center mb-4">
-            <img src="{{ asset('assets/logo.png') }}" alt="Bursa Talenta Logo" class="w-8 h-8 object-contain mr-2">
-            <span class="text-sm font-semibold text-gray-800">Bursa Talenta</span>
-        </div>
-    </div>
 
     <!-- Form Header -->
     <div class="mb-6">
